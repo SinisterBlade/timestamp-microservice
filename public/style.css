@@ -1,0 +1,41 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  text-align: center;
+  color: #373fff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  margin: auto;
+  max-width: 600px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+.monospace {
+  font-family: "Courier", courier, consolas, arial, sans-serif;
+  background-color: hsl(0, 0%, 90%);
+}
