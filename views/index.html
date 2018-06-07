@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A timestamp microservice made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>
+        Timestamp Microservice
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <p>The API endpoint is <span class="monospace">GET https://copper-soprano.glitch.me/api/timestamp/:date_string?</span></p>
+      </section>
+      <section>
+        <p>
+          A date string is valid if can be successfully parsed by <span class="monospace">new Date(date_string)</span>.
+        </p>
+      </section>
+      <section>
+        <p>If the date string is <span class="bold">empty</span> the service uses the current timestamp.</p>
+      </section>
+      <section>
+        <p>
+          If the date string is <span class="bold">valid</span> the api returns a JSON having the structure
+        </p>
+        <p>
+          <span class="monospace">
+            {"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt;}
+          </span>
+        </p>
+        <p>
+          e.g. <span class="monospace">{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</span>
+        </p>
+      </section>
+      <section>
+        <p>
+          If the date string is <span class="bold">invalid</span> the api returns a JSON having the structure
+        </p>
+        <p>
+          <span class="monospace">{"error" : "Invalid Date" }</span>.
+        </p>
+      </section>
+      <section>
+        <p class="bold">
+          Example Usage:
+        </p>
+        <p>
+          <a href="https://copper-soprano.glitch.me/api/timestamp/2015-12-25">https://copper-soprano.glitch.me/api/timestamp/2015-12-25</a>
+        </p>
+        <p>
+          <a href="https://copper-soprano.glitch.me/api/timestamp/1450137600">https://copper-soprano.glitch.me/api/timestamp/1450137600</a>
+        </p>
+      </section>
+      <section>
+        <p class="bold">
+          Example Output:
+        </p>
+        <p>
+          <span class="monospace">
+            {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"} 
+          </span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+  </body>
+</html>
